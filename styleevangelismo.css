@@ -1,0 +1,383 @@
+:root {
+  --color-fondo: #f0f4f8;
+  --color-primario: #8abfe2;
+  --color-secundario: #2c3e50;
+  --color-claro: #ffffff;
+  --color-indice: #e8f3fc;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Se recomienda importar desde Google Fonts */
+  background-color: var(--color-fondo);
+  color: var(--color-secundario);
+  padding: 40px; /* Aumenta el padding general */
+  margin: 0;
+  line-height: 1.6; /* Mejora la legibilidad del texto general */
+}
+
+h1 {
+  font-size: 56px; /* Un poco más grande para un título impactante */
+  color: var(--color-primario);
+  margin-bottom: 20px;
+  text-align: center; /* Centra el título principal */
+  letter-spacing: -1px; /* Ajusta el espacio entre letras para un look pulcro */
+}
+
+p {
+  font-size: 19px; /* Ligeramente más pequeño, pero legible */
+  margin-bottom: 40px; /* Más espacio debajo de los párrafos */
+  max-width: 800px; /* Limita el ancho de los párrafos para mejor legibilidad */
+  margin-left: auto;
+  margin-right: auto; /* Centra el párrafo */
+  text-align: center; /* Centra el texto del párrafo */
+}
+
+/* Botón de volver */
+.volver {
+  float: right;
+  background-color: var(--color-primario);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease; /* Suaviza la transición al hover */
+}
+
+.volver:hover {
+  background-color: #2d8bd2;
+}
+
+/* Bloque de encabezado (si lo usas en el HTML principal, asegúrate que esté bien ubicado) */
+.bloque {
+  position: relative;
+  background-color: var(--color-claro);
+  padding: 25px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 18px;
+}
+
+/* Índice lateral */
+.indice {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: var(--color-indice);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+  width: 150px;
+}
+
+.indice a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.indice a:hover {
+  color: var(--color-primario);
+}
+
+/* Secciones generales */
+section {
+  padding: 50px 20px; /* Más padding vertical y horizontal para separar secciones */
+  margin-bottom: 30px; /* Espacio entre secciones */
+  background-color: var(--color-claro); /* Fondo blanco para cada sección */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Sombra más pronunciada para diferenciar secciones */
+  text-align: center; /* Centra el contenido dentro de cada sección */
+}
+
+/* Títulos de secciones */
+section h2 {
+  color: var(--color-secundario); /* Cambia el color del título de sección a secundario para contraste */
+  font-size: 36px; /* Más grande y prominente */
+  margin-bottom: 35px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Línea decorativa debajo de los títulos de sección */
+section h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 80px; /* Ancho de la línea */
+  height: 4px; /* Grosor de la línea */
+  background-color: var(--color-primario);
+  border-radius: 2px;
+}
+
+/* Galería moderna */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales por defecto */
+  gap: 25px; /* Aumenta el espacio entre imágenes */
+  margin-top: 30px;
+  justify-content: center;
+  align-items: start; /* Alinea las imágenes a la parte superior de sus celdas */
+}
+
+.galeria img {
+  width: 100%;
+  height: 250px; /* Establece una altura fija para todas las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  border-radius: 8px; /* Ligeramente menos redondeado para un aspecto más formal */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra más sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Indica que la imagen es clickeable */
+}
+
+.galeria img:hover {
+  transform: translateY(-5px); /* Pequeño levantamiento al pasar el mouse */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* MEDIA QUERIES para la galería responsiva */
+@media (max-width: 1024px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: 15px;
+  }
+
+  section {
+    padding: 30px 15px; /* Reduce el padding de las secciones en móviles */
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .texto-esquinaizq {
+    max-width: 90%; /* Ajusta el ancho en móviles */
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+/* Contenedor de imagen con texto superpuesto (específico para la sección "Comunidad") */
+.contenedor-imagen {
+  position: relative;
+  display: flex; /* Cambia a flexbox para alinear el texto y la imagen */
+  flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+  justify-content: center; /* Centra el contenido */
+  align-items: center; /* Alinea verticalmente */
+  margin-bottom: 40px; /* Añade espacio debajo de esta sección */
+}
+
+/* Estilo para la imagen dentro de .contenedor-imagen */
+.contenedor-imagen .galeria {
+    grid-template-columns: repeat(3, 1fr); /* Igual que en el resto */
+    gap: 25px;
+    margin: 0 auto;
+    max-width: 1000px; /* O ajusta según necesidad */
+}
+
+/* Estilo específico para la imagen única en la sección comunidad si la galería solo contiene esa imagen */
+.contenedor-imagen .galeria img {
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  max-height: 400px; /* Altura máxima para la imagen grande */
+}
+
+
+.texto-esquinaizq {
+  position: static; /* Elimina el posicionamiento absoluto para que fluya con el contenido */
+  background-color: rgba(255, 255, 255, 0.95); /* Menos transparencia */
+  padding: 25px; /* Más padding */
+  border-radius: 10px;
+  max-width: 450px; /* Un poco más de ancho */
+  font-size: 17px; /* Ajusta el tamaño de fuente */
+  color: var(--color-secundario);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra más definida */
+  margin: 20px auto; /* Centra el texto y añade margen */
+  text-align: center; /* Centra el texto dentro del recuadro */
+}
+
+/* Lightbox HTML */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-overlay img {
+  max-width: 85%; /* Ligeramente más pequeña la imagen ampliada */
+  max-height: 85%;
+  border-radius: 12px; /* Más redondeado para un efecto suave */
+  box-shadow: 0 0 30px rgba(0,0,0,0.6); /* Sombra más intensa para el foco */
+  transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+
+/* Estilo para los subtítulos dentro de las galerías */
+.galeria-subtitulo {
+  grid-column: 1 / -1; /* Esto hace que ocupe todo el ancho de la cuadrícula */
+  text-align: center;
+  color: var(--color-secundario); /* Usamos el color secundario para que resalte pero no tanto como el título principal */
+  font-size: 2.2rem; /* Un tamaño de fuente considerable */
+  margin-top: 40px; /* Espacio antes del subtítulo */
+  margin-bottom: 25px; /* Espacio después del subtítulo */
+  padding-bottom: 10px; /* Espacio para una posible línea inferior */
+  position: relative;
+  font-weight: 700; /* Lo hacemos más grueso */
+}
+
+/* Línea decorativa debajo del subtítulo (opcional, para un toque extra) */
+.galeria-subtitulo::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60px; /* Ancho de la línea */
+  height: 3px; /* Grosor de la línea */
+  background-color: var(--color-primario); /* Usamos el color primario para la línea */
+  border-radius: 2px;
+}
+
+/* Ajuste para móviles: hacer el subtítulo más pequeño */
+@media (max-width: 768px) {
+  .galeria-subtitulo {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Añade esto a tu archivo styleevangelismo.css */
+
+.header-logo {
+  position: absolute; /* Permite posicionar el logo de forma precisa */
+  top: 20px; /* Distancia desde la parte superior del header */
+  left: 20px; /* Distancia desde la izquierda del header */
+  width: 120px; /* Ajusta el ancho según el tamaño deseado para tu logo */
+  height: auto; /* Mantiene la proporción de la imagen */
+  z-index: 10; /* Asegura que el logo esté por encima de otros elementos si hay superposiciones */
+  border-radius: 8px; /* Opcional: si tu logo se ve bien con bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Opcional: una ligera sombra para que destaque */
+}
+
+header {
+  position: relative; /* Importante: Esto permite que el logo se posicione absolutamente dentro del header */
+  background-color: var(--color-primario);
+  padding: 20px; /* Mantén el padding existente */
+  padding-left: 160px; /* Aumenta el padding a la izquierda para dejar espacio al logo */
+  padding-right: 160px; /* Aumenta el padding a la derecha para el botón "Regresar al inicio" */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex; /* Usamos flexbox para alinear el contenido dentro del header */
+  flex-direction: column; /* Apila los elementos verticalmente por defecto */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente */
+  min-height: 150px; /* Ajusta la altura mínima si tu logo es grande */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho/alto */
+}
+
+header h1 {
+  font-size: 56px;
+  color: var(--color-claro); /* Cambiado a color-claro (blanco) para contraste con el fondo primario */
+  margin-bottom: 10px; /* Reduce un poco el margen para el subtítulo */
+  margin-top: 10px; /* Añade margen superior si es necesario */
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+header p {
+  font-size: 19px;
+  color: var(--color-claro); /* También en blanco para contraste */
+  margin-bottom: 20px; /* Espacio debajo del párrafo */
+  max-width: 800px;
+}
+
+/* Ajusta el botón "Regresar al inicio" para que no se superponga con el logo */
+header .volver {
+  position: absolute; /* Posiciona el botón de forma absoluta */
+  top: 20px; /* Distancia desde arriba */
+  right: 20px; /* Distancia desde la derecha */
+  z-index: 10;
+}
+
+
+/* Media Queries para responsividad del logo y header */
+@media (max-width: 768px) {
+  .header-logo {
+    position: static; /* En móviles, el logo puede no ser absoluto para fluir mejor */
+    margin: 0 auto 15px auto; /* Centra el logo y añade margen inferior */
+    width: 100px; /* Reduce el tamaño del logo en móviles */
+    top: auto;
+    left: auto;
+  }
+
+  header {
+    padding: 20px; /* Elimina el padding extra en móviles */
+    min-height: auto; /* Altura mínima automática */
+  }
+  
+  header h1 {
+    font-size: 40px; /* Ajusta el tamaño del título en móviles */
+  }
+
+  header p {
+    font-size: 16px; /* Ajusta el tamaño del párrafo en móviles */
+  }
+
+  header .volver {
+    position: static; /* El botón también puede fluir con el contenido en móviles */
+    margin-top: 15px; /* Espacio por encima del botón */
+    float: none; /* Elimina el float */
+    display: block; /* Ocupa todo el ancho disponible */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 32px;
+  }
+}
+
+

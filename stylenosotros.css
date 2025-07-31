@@ -1,0 +1,168 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f5f8fa;
+    color: #333;
+}
+
+header {
+    position: relative; /* FUNDAMENTAL: Esto es clave para posicionar el logo y el botón ABSOLUTAMENTE dentro del header */
+    background-color: #1e88e5;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 120px; /* Asegura una altura mínima para el header */
+    display: flex; /* Usar flexbox para centrar el H1 */
+    flex-direction: column; /* Apila el contenido (logo, h1, botón) verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente el texto */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+
+    /* Ajuste de padding para dejar espacio al logo (izquierda) y al botón (derecha) */
+    padding: 30px 140px; /* 30px arriba/abajo, 140px izquierda/derecha para espacio */
+}
+
+.header-logo {
+    position: absolute; /* Posiciona el logo de forma precisa */
+    top: 20px; /* Distancia desde la parte superior del header */
+    left: 20px; /* Distancia desde la izquierda del header */
+    width: 100px; /* Ancho del logo, ajusta según necesidad */
+    height: auto; /* Mantiene la proporción */
+    z-index: 10; /* Asegura que el logo esté por encima de otros elementos */
+    border-radius: 8px; /* Pequeño redondeo si quieres */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil para que destaque */
+}
+
+/* Estilo para el botón "Regresar al inicio" en el header */
+.volver {
+    position: absolute; /* Posicionamiento absoluto respecto al header */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la parte derecha */
+    background-color: #1565c0; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    white-space: nowrap; /* Evita que el texto del botón se rompa en varias líneas */
+    display: inline-block; /* Asegura que el padding y las dimensiones se apliquen correctamente */
+}
+
+.volver:hover {
+    background-color: #0d47a1; /* Color al pasar el ratón */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    /* Los paddings ya se manejan en el header, pero puedes ajustarlos aquí si el texto se superpone */
+}
+
+.section {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 2em;
+    color: #1e88e5;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.center-button {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.center-button a {
+    background-color: #1e88e5;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.center-button a:hover {
+    background-color: #1565c0;
+}
+
+footer {
+    text-align: center;
+    background-color: #e3f2fd;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 0.9em;
+    border-top: 1px solid #ccc;
+}
+
+.text-content p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* MEDIA QUERIES para responsividad del logo, botón y header en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .header-logo {
+        position: static; /* Quita el posicionamiento absoluto en móviles */
+        display: block; /* Para que ocupe su propia línea */
+        margin: 0 auto 15px auto; /* Centra el logo y añade margen inferior */
+        width: 80px; /* Reduce el tamaño del logo en móviles */
+        top: auto; /* Restablece las propiedades de posicionamiento */
+        left: auto;
+    }
+
+    /* Ajuste del botón para móviles */
+    .volver {
+        position: static; /* En móviles, haz que el botón fluya normalmente */
+        margin-top: 15px; /* Espacio por encima del botón */
+        float: none; /* Elimina el float si existía */
+        display: block; /* Ocupa todo el ancho disponible para centrarse */
+        width: fit-content; /* Ajusta el ancho al contenido del botón */
+        margin-left: auto;
+        margin-right: auto; /* Centra el botón en móviles */
+        top: auto; /* Restablece las propiedades de posicionamiento */
+        right: auto;
+    }
+
+    header {
+        padding: 20px; /* Elimina el padding extra específico para logo/botón en móviles */
+        min-height: auto; /* Altura mínima automática */
+        flex-direction: column; /* Asegura que el h1, logo y botón estén apilados */
+        align-items: center; /* Centra todo */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Ajusta el tamaño del título en móviles */
+        padding-left: 0; /* Elimina el padding extra en móviles */
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+}

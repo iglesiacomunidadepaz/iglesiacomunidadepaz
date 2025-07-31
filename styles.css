@@ -1,0 +1,237 @@
+:root {
+  --color-fondo: #f4f4f9;
+  --color-primario: #f8e2de;
+  --color-secundario: #2c3e50;
+  --color-texto: #333;
+  --color-acento: #3498db;
+  --fuente-principal: 'Roboto', Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.texto-esquinaizq {
+  position: fixed;
+  top: 50px;
+  left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  max-width: 200px;
+  z-index: 1000;
+}
+
+header {
+  background-color: var(--color-primario);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+nav {
+  background-color: var(--color-primario);
+  border-radius: 20px;
+  padding: 15px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+nav h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-secundario);
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: var(--color-acento);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.contenido {
+  flex: 1 1 400px;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.contenido h3 {
+  font-size: 1.8rem;
+  color: var(--color-secundario);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.texto {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+.imagen {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-mateo {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contactos {
+  background-color: var(--color-primario);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.contactos h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.contactos p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: var(--color-primario);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .imagen {
+    order: -1;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto-esquinaizq {
+    font-size: 12px;
+    max-width: 150px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+/* Estilos existentes de styles.css ... */
+
+/* Estilos para la sección de ubicación */
+.ubicacion {
+    max-width: 900px; /* Ancho máximo para el contenido, ajusta si es necesario */
+    margin: 40px auto; /* Centra la sección y añade margen */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center; /* Centra el título y el mapa */
+}
+
+.ubicacion h3 {
+    color: #1e88e5; /* Color del título, igual que otros títulos */
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.ubicacion p {
+    margin-bottom: 10px;
+}
+
+.ubicacion iframe {
+    width: 100%; /* El mapa ocupará el 100% del ancho de su contenedor */
+    max-width: 700px; /* Puedes establecer un ancho máximo para el mapa */
+    height: 450px; /* Altura fija, ajusta según necesidad */
+    border-radius: 8px; /* Bordes redondeados para el mapa */
+    margin-top: 20px; /* Espacio superior para separar del texto */
+}
+
+/* Media Query para responsividad en móviles */
+@media (max-width: 768px) {
+    .ubicacion {
+        margin: 20px; /* Reduce el margen en pantallas pequeñas */
+        padding: 15px;
+    }
+
+    .ubicacion h3 {
+        font-size: 1.6em; /* Ajusta el tamaño del título en móviles */
+    }
+
+    .ubicacion iframe {
+        height: 300px; /* Reduce la altura del mapa en móviles */
+    }
+}
+
+
+
+    
