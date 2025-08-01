@@ -7,29 +7,29 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Se recomienda importar desde Google Fonts */
+  font-family: 'Roboto', sans-serif;
   background-color: var(--color-fondo);
   color: var(--color-secundario);
-  padding: 40px; /* Aumenta el padding general */
+  padding: 40px;
   margin: 0;
-  line-height: 1.6; /* Mejora la legibilidad del texto general */
+  line-height: 1.6;
 }
 
 h1 {
-  font-size: 56px; /* Un poco más grande para un título impactante */
+  font-size: 56px;
   color: var(--color-primario);
   margin-bottom: 20px;
-  text-align: center; /* Centra el título principal */
-  letter-spacing: -1px; /* Ajusta el espacio entre letras para un look pulcro */
+  text-align: center;
+  letter-spacing: -1px;
 }
 
 p {
-  font-size: 19px; /* Ligeramente más pequeño, pero legible */
-  margin-bottom: 40px; /* Más espacio debajo de los párrafos */
-  max-width: 800px; /* Limita el ancho de los párrafos para mejor legibilidad */
+  font-size: 19px;
+  margin-bottom: 40px;
+  max-width: 800px;
   margin-left: auto;
-  margin-right: auto; /* Centra el párrafo */
-  text-align: center; /* Centra el texto del párrafo */
+  margin-right: auto;
+  text-align: center;
 }
 
 /* Botón de volver */
@@ -42,7 +42,7 @@ p {
   text-decoration: none;
   font-weight: bold;
   margin-bottom: 20px;
-  transition: background-color 0.3s ease; /* Suaviza la transición al hover */
+  transition: background-color 0.3s ease;
 }
 
 .volver:hover {
@@ -89,18 +89,18 @@ p {
 
 /* Secciones generales */
 section {
-  padding: 50px 20px; /* Más padding vertical y horizontal para separar secciones */
-  margin-bottom: 30px; /* Espacio entre secciones */
-  background-color: var(--color-claro); /* Fondo blanco para cada sección */
+  padding: 50px 20px;
+  margin-bottom: 30px;
+  background-color: var(--color-claro);
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Sombra más pronunciada para diferenciar secciones */
-  text-align: center; /* Centra el contenido dentro de cada sección */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
 }
 
 /* Títulos de secciones */
 section h2 {
-  color: var(--color-secundario); /* Cambia el color del título de sección a secundario para contraste */
-  font-size: 36px; /* Más grande y prominente */
+  color: var(--color-secundario);
+  font-size: 36px;
   margin-bottom: 35px;
   position: relative;
   padding-bottom: 15px;
@@ -113,8 +113,8 @@ section h2::after {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  width: 80px; /* Ancho de la línea */
-  height: 4px; /* Grosor de la línea */
+  width: 80px;
+  height: 4px;
   background-color: var(--color-primario);
   border-radius: 2px;
 }
@@ -122,44 +122,44 @@ section h2::after {
 /* Galería moderna */
 .galeria {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales por defecto */
-  gap: 25px; /* Aumenta el espacio entre imágenes */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
   margin-top: 30px;
   justify-content: center;
-  align-items: start; /* Alinea las imágenes a la parte superior de sus celdas */
+  align-items: start;
 }
 
 .galeria img {
   width: 100%;
-  height: 250px; /* Establece una altura fija para todas las imágenes */
-  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-  border-radius: 8px; /* Ligeramente menos redondeado para un aspecto más formal */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra más sutil */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer; /* Indica que la imagen es clickeable */
+  cursor: pointer;
 }
 
 .galeria img:hover {
-  transform: translateY(-5px); /* Pequeño levantamiento al pasar el mouse */
+  transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
-/* MEDIA QUERIES para la galería responsiva */
+/* Media Queries para la galería responsiva */
 @media (max-width: 1024px) {
   .galeria {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .galeria {
-    grid-template-columns: 1fr; /* 1 columna en móviles */
+    grid-template-columns: 1fr;
     gap: 15px;
   }
 
   section {
-    padding: 30px 15px; /* Reduce el padding de las secciones en móviles */
+    padding: 30px 15px;
   }
 
   h1 {
@@ -170,50 +170,42 @@ section h2::after {
     font-size: 28px;
     margin-bottom: 25px;
   }
-
-  .texto-esquinaizq {
-    max-width: 90%; /* Ajusta el ancho en móviles */
-    font-size: 14px;
-    padding: 15px;
-  }
 }
 
-/* Contenedor de imagen con texto superpuesto (específico para la sección "Comunidad") */
+/* Contenedor de imagen con texto superpuesto */
 .contenedor-imagen {
   position: relative;
-  display: flex; /* Cambia a flexbox para alinear el texto y la imagen */
-  flex-direction: column; /* Apila los elementos en pantallas pequeñas */
-  justify-content: center; /* Centra el contenido */
-  align-items: center; /* Alinea verticalmente */
-  margin-bottom: 40px; /* Añade espacio debajo de esta sección */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-/* Estilo para la imagen dentro de .contenedor-imagen */
 .contenedor-imagen .galeria {
-    grid-template-columns: repeat(3, 1fr); /* Igual que en el resto */
-    gap: 25px;
-    margin: 0 auto;
-    max-width: 1000px; /* O ajusta según necesidad */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
-/* Estilo específico para la imagen única en la sección comunidad si la galería solo contiene esa imagen */
 .contenedor-imagen .galeria img {
-  height: auto; /* Permite que la altura se ajuste automáticamente */
-  max-height: 400px; /* Altura máxima para la imagen grande */
+  height: auto;
+  max-height: 400px;
 }
 
-
+/* ESTE ES EL CÓDIGO CORREGIDO PARA CENTRAR EL DIV DE LA CITA */
 .texto-esquinaizq {
-  position: static; /* Elimina el posicionamiento absoluto para que fluya con el contenido */
-  background-color: rgba(255, 255, 255, 0.95); /* Menos transparencia */
-  padding: 25px; /* Más padding */
+  position: static;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 25px;
   border-radius: 10px;
-  max-width: 450px; /* Un poco más de ancho */
-  font-size: 17px; /* Ajusta el tamaño de fuente */
+  max-width: 450px;
+  font-size: 17px;
   color: var(--color-secundario);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra más definida */
-  margin: 20px auto; /* Centra el texto y añade margen */
-  text-align: center; /* Centra el texto dentro del recuadro */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 20px auto; /* Esta es la línea que centra el div horizontalmente */
+  text-align: center;
 }
 
 /* Lightbox HTML */
@@ -231,10 +223,10 @@ section h2::after {
 }
 
 .lightbox-overlay img {
-  max-width: 85%; /* Ligeramente más pequeña la imagen ampliada */
+  max-width: 85%;
   max-height: 85%;
-  border-radius: 12px; /* Más redondeado para un efecto suave */
-  box-shadow: 0 0 30px rgba(0,0,0,0.6); /* Sombra más intensa para el foco */
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
   transition: transform 0.3s ease;
 }
 
@@ -256,15 +248,15 @@ footer {
 
 /* Estilo para los subtítulos dentro de las galerías */
 .galeria-subtitulo {
-  grid-column: 1 / -1; /* Esto hace que ocupe todo el ancho de la cuadrícula */
+  grid-column: 1 / -1;
   text-align: center;
-  color: var(--color-secundario); /* Usamos el color secundario para que resalte pero no tanto como el título principal */
-  font-size: 2.2rem; /* Un tamaño de fuente considerable */
-  margin-top: 40px; /* Espacio antes del subtítulo */
-  margin-bottom: 25px; /* Espacio después del subtítulo */
-  padding-bottom: 10px; /* Espacio para una posible línea inferior */
+  color: var(--color-secundario);
+  font-size: 2.2rem;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
   position: relative;
-  font-weight: 700; /* Lo hacemos más grueso */
+  font-weight: 700;
 }
 
 /* Línea decorativa debajo del subtítulo (opcional, para un toque extra) */
@@ -274,9 +266,9 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  width: 60px; /* Ancho de la línea */
-  height: 3px; /* Grosor de la línea */
-  background-color: var(--color-primario); /* Usamos el color primario para la línea */
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primario);
   border-radius: 2px;
 }
 
@@ -289,88 +281,85 @@ footer {
   }
 }
 
-/* Añade esto a tu archivo styleevangelismo.css */
-
 .header-logo {
-  position: absolute; /* Permite posicionar el logo de forma precisa */
-  top: 20px; /* Distancia desde la parte superior del header */
-  left: 20px; /* Distancia desde la izquierda del header */
-  width: 120px; /* Ajusta el ancho según el tamaño deseado para tu logo */
-  height: auto; /* Mantiene la proporción de la imagen */
-  z-index: 10; /* Asegura que el logo esté por encima de otros elementos si hay superposiciones */
-  border-radius: 8px; /* Opcional: si tu logo se ve bien con bordes redondeados */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Opcional: una ligera sombra para que destaque */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: auto;
+  z-index: 10;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 header {
-  position: relative; /* Importante: Esto permite que el logo se posicione absolutamente dentro del header */
+  position: relative;
   background-color: var(--color-primario);
-  padding: 20px; /* Mantén el padding existente */
-  padding-left: 160px; /* Aumenta el padding a la izquierda para dejar espacio al logo */
-  padding-right: 160px; /* Aumenta el padding a la derecha para el botón "Regresar al inicio" */
+  padding: 20px;
+  padding-left: 160px;
+  padding-right: 160px;
   border-radius: 8px;
   margin-bottom: 20px;
-  display: flex; /* Usamos flexbox para alinear el contenido dentro del header */
-  flex-direction: column; /* Apila los elementos verticalmente por defecto */
-  align-items: center; /* Centra horizontalmente los elementos */
-  justify-content: center; /* Centra verticalmente */
-  min-height: 150px; /* Ajusta la altura mínima si tu logo es grande */
-  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho/alto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  box-sizing: border-box;
 }
 
 header h1 {
   font-size: 56px;
-  color: var(--color-claro); /* Cambiado a color-claro (blanco) para contraste con el fondo primario */
-  margin-bottom: 10px; /* Reduce un poco el margen para el subtítulo */
-  margin-top: 10px; /* Añade margen superior si es necesario */
+  color: var(--color-claro);
+  margin-bottom: 10px;
+  margin-top: 10px;
   text-align: center;
   letter-spacing: -1px;
 }
 
 header p {
   font-size: 19px;
-  color: var(--color-claro); /* También en blanco para contraste */
-  margin-bottom: 20px; /* Espacio debajo del párrafo */
+  color: var(--color-claro);
+  margin-bottom: 20px;
   max-width: 800px;
 }
 
 /* Ajusta el botón "Regresar al inicio" para que no se superponga con el logo */
 header .volver {
-  position: absolute; /* Posiciona el botón de forma absoluta */
-  top: 20px; /* Distancia desde arriba */
-  right: 20px; /* Distancia desde la derecha */
+  position: absolute;
+  top: 20px;
+  right: 20px;
   z-index: 10;
 }
-
 
 /* Media Queries para responsividad del logo y header */
 @media (max-width: 768px) {
   .header-logo {
-    position: static; /* En móviles, el logo puede no ser absoluto para fluir mejor */
-    margin: 0 auto 15px auto; /* Centra el logo y añade margen inferior */
-    width: 100px; /* Reduce el tamaño del logo en móviles */
+    position: static;
+    margin: 0 auto 15px auto;
+    width: 100px;
     top: auto;
     left: auto;
   }
 
   header {
-    padding: 20px; /* Elimina el padding extra en móviles */
-    min-height: auto; /* Altura mínima automática */
+    padding: 20px;
+    min-height: auto;
   }
   
   header h1 {
-    font-size: 40px; /* Ajusta el tamaño del título en móviles */
+    font-size: 40px;
   }
 
   header p {
-    font-size: 16px; /* Ajusta el tamaño del párrafo en móviles */
+    font-size: 16px;
   }
 
   header .volver {
-    position: static; /* El botón también puede fluir con el contenido en móviles */
-    margin-top: 15px; /* Espacio por encima del botón */
-    float: none; /* Elimina el float */
-    display: block; /* Ocupa todo el ancho disponible */
+    position: static;
+    margin-top: 15px;
+    float: none;
+    display: block;
   }
 }
 
