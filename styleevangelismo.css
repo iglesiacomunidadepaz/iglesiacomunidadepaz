@@ -194,7 +194,6 @@ section h2::after {
   max-height: 400px;
 }
 
-/* ESTE ES EL CÓDIGO CORREGIDO PARA CENTRAR EL DIV DE LA CITA */
 .texto-esquinaizq {
   position: static;
   background-color: rgba(255, 255, 255, 0.95);
@@ -204,7 +203,7 @@ section h2::after {
   font-size: 17px;
   color: var(--color-secundario);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  margin: 20px auto; /* Esta es la línea que centra el div horizontalmente */
+  margin: 20px auto;
   text-align: center;
 }
 
@@ -369,4 +368,29 @@ header .volver {
   }
 }
 
+/* Nuevos estilos para la sección de liderazgo */
+.leader-card {
+  text-align: center;
+  /* Elimina el efecto de "hover" de la imagen y lo aplica al contenedor completo si lo deseas */
+}
 
+/* Anulamos el estilo de la galería para que la imagen no tenga un alto fijo, permitiendo que el texto debajo se ajuste */
+.leader-card img {
+  height: auto;
+  /* El resto de estilos de la imagen se mantienen */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Ajustamos el estilo del texto para los nombres */
+.leader-name {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-secundario);
+}
